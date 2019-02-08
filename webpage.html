@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<title>3X in a Row!</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+    
+<script>
+function toDo(){
+        document.getElementById('home').src = "instructions.jpg";
+}
+function goHome(){
+        document.getElementById('home').src = "home.jpg";
+}
+function play() {
+        window.open("http://127.0.0.1:59327/y10web/gamecode2.html")
+}
+</script>
+
+<style>
+body,h1 {font-family: "Raleway", sans-serif}
+body, html {height: 100%}
+.bgimg {
+  background-image: url('BG.jpg');
+  min-height: 100%;
+  background-position: center;
+  background-size: cover;
+}
+</style>
+<body>
+
+<div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
+  <div class="w3-display-topleft w3-padding-large w3-xlarge">
+  </div>
+  <div class="w3-display-middle">
+    <h1 class="w3-jumbo w3-animate-top"><img id = "home" src = "home.jpg" onclick="play()"></h1>
+  </div>
+  <div class="w3-display-bottomright w3-padding-large" id ="instructions">
+    <h1 class="w3-jumbo w3-animate-top"><img src ="inst.jpg" onclick="toDo()"></h1>
+  </div>
+  <div class="w3-display-topleft w3-padding-large" id ="gh">
+    <h1 class="w3-jumbo w3-animate-top"><img src ="gohome.jpg" onclick="goHome()"></h1>
+  </div>
+</div>
+
+</body>
+</html>

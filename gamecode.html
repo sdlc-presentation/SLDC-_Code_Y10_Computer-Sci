@@ -1,0 +1,187 @@
+<html>
+<body>
+<button type = "button" onclick="reset()">Reset Game</button>
+<center>
+<br><br><br>
+    
+<table style="border: 5" "width:100%">
+  <tr>
+    <th></th>
+    <th>X's and O's</th> 
+    <th></th>
+  </tr>
+  <tr>
+    <td><img id ="topLeft" src =Backdrop.jpg onclick="XtopLeft()"></td>
+    <td><img id ="topMid" src =Backdrop.jpg onclick="XtopMid()"></td>
+    <td><img id ="topRight" src =Backdrop.jpg onclick="Xtopright()"></td>
+  </tr>
+  <tr>
+    <td><img id ="midLeft" src =Backdrop.jpg></td>
+    <td><img id ="midMid" src =Backdrop.jpg></td>
+    <td><img id ="midRight" src =Backdrop.jpg></td>
+  </tr>
+  <tr>
+    <td><img id ="bottomLeft" src =Backdrop.jpg></td>
+    <td><img id ="bottomMid" src =Backdrop.jpg></td>
+    <td><img id ="bottomRight" src =Backdrop.jpg></td>
+  </tr>
+</table>
+<br><br><br>
+
+<script>
+
+var player_now = 2;
+var trTaken = false;
+    
+
+function XtopRight(){
+    if(trTaken == false) {
+       document.getElementById('topRight').src='x.jpg';
+
+    document.getElementById('topRight').src='O.jpg';
+
+    player_now = player_now - 1;
+}
+    
+    
+function XtopMid(){
+    if(trTaken == false) {
+       document.getElementById('topMid').src='x.jpg';
+    }
+
+    player_now = player_now + 1;
+}
+function OtopMid(){
+    if(trTaken == false){
+        document.getElementById('topMid').src='O.jpg';
+    }
+
+    player_now = player_now - 1;
+}
+function XtopLeft(){
+    if(trTaken == false) {
+       document.getElementById('topLeft').src='x.jpg';
+    }
+
+    player_now = player_now + 1;
+}
+function OtopLeft(){
+    if(trTaken == false){
+        document.getElementById('topLeft').src='O.jpg';
+    }
+
+    player_now = player_now - 1;
+}
+function XmidRight(){
+    if(trTaken == false) {
+       document.getElementById('midRight').src='x.jpg';
+    }
+    player_now = player_now + 1;
+}
+function OmidRight(){
+    if(trTaken == false){
+        document.getElementById('midRight').src='O.jpg';
+    }
+    player_now = player_now - 1;
+}
+function XmidMid(){
+    if(trTaken == false) {
+       document.getElementById('midMid').src='x.jpg';
+    }
+    player_now = player_now + 1;
+}
+function OmidMid(){
+    if(trTaken == false){
+        document.getElementById('midMid').src='O.jpg';
+    }
+    player_now = player_now - 1;
+}
+function XmidLeft(){
+    if(trTaken == false) {
+       document.getElementById('midLeft').src='x.jpg';
+    }
+    player_now = player_now + 1;
+}
+function OmidLeft(){
+    if(trTaken == false){
+        document.getElementById('midLeft').src='O.jpg';
+    }
+    player_now = player_now - 1;
+}
+function XbottomRight(){
+    if(trTaken == false) {
+       document.getElementById('bottomRight').src='x.jpg';
+    }
+    player_now = player_now + 1;
+}
+function ObottomRight(){
+    if(trTaken == false){
+        document.getElementById('bottomRight').src='O.jpg';
+    }
+    player_now = player_now - 1;
+}
+function XbottomMid(){
+    if(trTaken == false) {
+       document.getElementById('bottomMid').src='x.jpg';
+    }
+    player_now = player_now + 1;
+}
+function ObottomMid(){
+    if(trTaken == false){
+        document.getElementById('bottomMid').src='O.jpg';
+    }
+    player_now = player_now - 1;
+}
+function XbottomLeft(){
+    if(trTaken == false) {
+       document.getElementById('bottomLeft').src='x.jpg';
+    }
+    player_now = player_now + 1;
+}
+function ObottomLeft(){
+    if(trTaken == false){
+        document.getElementById('bottomLeft').src='O.jpg';
+    }
+    player_now = player_now - 1;
+}
+function reset(){
+    document.getElementById('topLeft').src='Backdrop.jpg';
+    document.getElementById('topMid').src='Backdrop.jpg';
+    document.getElementById('topRight').src='Backdrop.jpg';
+    document.getElementById('midLeft').src='Backdrop.jpg';
+    document.getElementById('midMid').src='Backdrop.jpg';
+    document.getElementById('midRight').src='Backdrop.jpg';
+    document.getElementById('bottomLeft').src='Backdrop.jpg';
+    document.getElementById('bottomMid').src='Backdrop.jpg';
+    document.getElementById('bottomRight').src='Backdrop.jpg';
+
+}
+</script>
+<br>
+<h4>Click to place token</h4>
+<button type="button" onclick="XtopLeft()">X</button>
+<button type="button" onclick="XtopMid()">X</button>
+<button type="button" onclick="XtopRight()">X</button><pl>    </pl>
+<button type="button" onclick="OtopLeft()">O</button>
+<button type="button" onclick="OtopMid()">O</button>
+<button type="button" onclick="OtopRight()">O</button>
+<br>
+<button type="button" onclick="XmidLeft()">X</button>
+<button type="button" onclick="XmidMid()">X</button>
+<button type="button" onclick="XmidRight()">X</button><pl>    </pl>
+<button type="button" onclick="OmidLeft()">O</button>
+<button type="button" onclick="OmidMid()">O</button>
+<button type="button" onclick="OmidRight()">O</button>
+<br>
+<button type="button" onclick="XbottomLeft()">X</button>
+<button type="button" onclick="XbottomMid()">X</button>
+<button type="button" onclick="XbottomRight()">X</button><pl>    </pl>
+<button type="button" onclick="ObottomLeft()">O</button>
+<button type="button" onclick="ObottomMid()">O</button>
+<button type="button" onclick="ObottomRight()">O</button>
+    
+</center>
+
+</body>
+
+</html>

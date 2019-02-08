@@ -1,0 +1,123 @@
+<html>
+
+<style>
+    body {
+        background-image: url(BG.jpg)
+    }
+</style>
+
+<body>
+<img src =rsgply.jpg onclick="reset()"> <br>
+<img src =gohome.jpg onclick="goHome()">
+<center>
+<br><br><br>
+<img src ="Gamehead.jpg">
+<br>
+<br>
+<table style="border: 5" "width:100%">
+  <tr>
+    <th></th>
+    <th id ="heading"></th> 
+    <th></th>
+  </tr>
+  <tr>
+    <td><img id ="topLeft" src =Backdrop.jpg onclick="placePiece('topLeft')"></td>
+    <td><img id ="topMid" src =Backdrop.jpg onclick="placePiece('topMid')"></td>
+    <td><img id ="topRight" src =Backdrop.jpg onclick="placePiece('topRight')"></td>
+  </tr>
+  <tr>
+    <td><img id ="midLeft" src =Backdrop.jpg onclick="placePiece('midLeft')"></td>
+    <td><img id ="midMid" src =Backdrop.jpg onclick="placePiece('midMid')"></td>
+    <td><img id ="midRight" src =Backdrop.jpg onclick="placePiece('midRight')"></td>
+  </tr>
+  <tr>
+    <td><img id ="bottomLeft" src =Backdrop.jpg onclick="placePiece('bottomLeft')"></td>
+    <td><img id ="bottomMid" src =Backdrop.jpg onclick="placePiece('bottomMid')"></td>
+    <td><img id ="bottomRight" src =Backdrop.jpg onclick="placePiece('bottomRight')"></td>
+  </tr>
+</table>
+<br><br><br>
+    
+    <script>
+    
+    var player = "x";
+    var tl = undefined;
+    var tm = undefined;
+    var tr = undefined;
+        
+    function placePiece(loc){
+        
+        if (loc == "topLeft") {
+            console.log(player)
+            document.getElementById('topLeft').src=player+'.jpg';
+            tl = player;
+            console.log(tl)
+        }
+        if (loc == "topMid") {
+            console.log(player)
+            document.getElementById('topMid').src=player+'.jpg';
+            tm = player;
+            console.log(tm)
+        }
+        if (loc == "topRight") {
+            console.log(player)
+            document.getElementById('topRight').src=player+'.jpg';
+            tr = player;
+            console.log(tr)
+        }
+        if (loc == "midLeft") {
+            console.log(player)
+            document.getElementById('midLeft').src=player+'.jpg';
+        }
+        if (loc == "midMid") {
+            console.log(player)
+            document.getElementById('midMid').src=player+'.jpg';
+        }
+        if (loc == "midRight") {
+            console.log(player)
+            document.getElementById('midRight').src=player+'.jpg';
+        }
+        if (loc == "bottomLeft") {
+            console.log(player)
+            document.getElementById('bottomLeft').src=player+'.jpg';
+        }
+        if (loc == "bottomMid") {
+            console.log(player)
+            document.getElementById('bottomMid').src=player+'.jpg';
+        }
+        if (loc == "bottomRight") {
+            console.log(player)
+            document.getElementById('bottomRight').src=player+'.jpg';
+        }
+  
+        if (player == "o"){
+            player = "x";
+        }
+        else if (player == "x"){
+            player = "o";
+        }
+    
+    }
+    
+    function reset(){
+    document.getElementById('topLeft').src='Backdrop.jpg';
+    document.getElementById('topMid').src='Backdrop.jpg';
+    document.getElementById('topRight').src='Backdrop.jpg';
+    document.getElementById('midLeft').src='Backdrop.jpg';
+    document.getElementById('midMid').src='Backdrop.jpg';
+    document.getElementById('midRight').src='Backdrop.jpg';
+    document.getElementById('bottomLeft').src='Backdrop.jpg';
+    document.getElementById('bottomMid').src='Backdrop.jpg';
+    document.getElementById('bottomRight').src='Backdrop.jpg';
+        
+    if (player == "o"){
+        player = "x"; 
+    } 
+
+    }
+    
+    function goHome(){
+        window.open("http://127.0.0.1:59327/y10web/webpage.html");
+    }
+        
+    </script>
